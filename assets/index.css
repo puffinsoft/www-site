@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Tenor+Sans&display=swap');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+
+    scroll-snap-type: y mandatory;
+}
+
+
+.page {
+    min-height: 100vh;
+    position: relative;
+
+    scroll-snap-align: start;
+
+    overflow-x: hidden;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("images/background.png");
+    background-size: cover;
+    background-position: bottom left;
+    filter: brightness(0);
+    transition: filter 5s;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+
+    min-height: inherit;
+
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 2;
+}
+
+#logo {
+    position: absolute;
+    top: 50px;
+    color: white;
+
+    font-family: "Tenor Sans";
+    font-weight: 800;
+    font-size: 28px;
+
+    user-select: none;
+
+    z-index: 1;
+}
+
+#title-container {
+    z-index: 1;
+}
+
+#logo img {
+    height: 20px;
+    filter: brightness(0) invert(1);
+    margin-right: 5px;
+}
+
+.title {
+    font-family: "Plus Jakarta Sans";
+    color: white;
+    margin: 0;
+}
+
+#title1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#title2 {
+    font-size: 80px;
+    font-weight: 800;
+}
+
+#hero .content {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+#stats {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    max-width: 930px;
+    gap: 0 70px;
+}
+
+#stats .stat {
+    font-family: "Inter";
+}
+
+#stats .stat h1 {
+    font-size: 100px;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+}
+
+#stats .stat p {
+    font-size: 28px;
+    margin-top: 4px;
+    text-align: right;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: -256px;
+    opacity: 0.5;
+    z-index: 0;
+    min-height: 100%;
+}
+
+.libraries {
+    display: flex;
+
+    margin-top: 10px;
+
+    max-width: 930px;
+
+    gap: 0 10px;
+}
+
+.libraries .library {
+    min-width: 250px;
+
+    font-family: "Inter";
+
+    background: #FAFAFA;
+
+    padding: 16px;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: initial;
+
+    transition: 0.3s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.libraries .library:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.libraries .library img.external{
+    position: absolute;
+    width: 14px;
+    opacity: 0.5;
+    right: 10px;
+    top: 10px;
+}
+
+.libraries .library .metadata-list {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+
+    display: flex;
+    gap: 0 20px;
+}
+
+.libraries .library .metadata-list img{
+    margin-right: 5px;
+}
+
+.libraries .library .metadata-list .lang-icon {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.libraries .library .metadata-list .metadata {
+    color: #59636e;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+}
+
+.libraries .library .background {
+    position: absolute;
+    top: -80px;
+    left: 0;
+
+    opacity: 0.2;
+    transition: 0.3s;
+}
+
+.libraries .library:hover .background {
+    opacity: 0.6;
+}
+
+.libraries .library .icon {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f0f1f1;
+    padding: 10px;
+    border-radius: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.libraries .library h1 {
+    font-size: 24px;
+    margin-bottom: -5px;
+}
+
+.libraries .library p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #52525B;
+}
+
+.libraries .library .icon img {
+    height: 24px;
+}
+
+#users {
+    display: inline-block;
+    width: 450px;
+    text-align: right;
+}
+
+#stars {
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
+    #title1 {
+        font-size: 35px;
+    }
+
+    #title2 {
+        font-size: 50px;
+    }
+
+    #stats {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    #title1 span {
+        display: block;
+    }
+
+    #stats .stat h1 {
+        font-size: 45px !important;
+    }
+
+    #users {
+        width: 200px !important;
+    }
+
+    #stars {
+        width: 110px !important;
+    }
+
+    .libraries{
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+
+    .libraries .library{
+        margin-bottom: 10px;
+        flex-basis: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #stats .stat h1 {
+        font-size: 70px;
+    }
+
+    #users {
+        width: 315px;
+    }
+
+    #stars {
+        width: 170px;
+    }
+}
